@@ -1,30 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>exemplos array</title>
 </head>
+
 <body>
     <p></p>
     <script>
         const paragrafo = querrySelector(p)
-        bdv = ["webert" , 34, "tigrinho"]
+        bdv = ["webert", 34, "tigrinho", 93, "tigrinho"]
         //bdv.indexOf()
-        paragrafo.innerText("o primeiro Index de trigrinho é: " + bdv.indexOF(trigrinho))
+        paragrafo.innerText("o primeiro Index de tigrinho é: " + bdv.indexOF("tigrinho")) //2
 
 
         //bdv.lastIndexOf()
-        paragrafo.innerText("o último Index de trigrinho é: " + bdv.indexOF(trigrinho))
+        paragrafo.innerText("o último Index de tigrinho é: " + bdv.LastIndexOf("tigrinho")) //4
 
 
         //bdv.includes()
-        bdv.include("Homofóbico")
-        bdv.find()
-        bdv.findIndex()
-        bdv.findLast()
-        bdv.findLastIndex()
+        paragrafo.innerText("o array bdv inclui tigrinho? " + bdv.includes("tigrinho")) //true
+        paragrafo.innerText("o array bdv inclui coelhinho? " + bdv.includes("coelhinho")) //false
+
+        function procurarPeloRequisito(valor,qualIndex,qualUltimoIndex){
+            return valor > 35 //esse é o requisito
+        } //retorna 93
+
+        bdv.find(procurarPeloRequisito) //retorna 93 (primeiro valor que atende ao requisito)
+        bdv.findIndex(procurarPeloRequisito) //retorna 3 (index do primeiro valor que atende ao requisito)
+        bdv.findLast(procurarPeloRequisito) //retorna 93 (último valor que atende ao requisito)
+        bdv.findLastIndex(procurarPeloRequisito) //retorna 3 (index do último valor que atende ao requisito)
+        
     </script>
 
 </body>
+
 </html>
